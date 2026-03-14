@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый ноутбук: выбираем вместе</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="laptop.css">
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-laptop"></i>
+                    <span>Выбираем ноутбук</span>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#criteria"><i class="fas fa-list"></i> Критерии</a></li>
+                        <li><a href="#calculator"><i class="fas fa-calculator"></i> Бюджет</a></li>
+                        <li><a href="#comparison"><i class="fas fa-balance-scale"></i> Сравнение</a></li>
+                        <li><a href="#tips"><i class="fas fa-lightbulb"></i> Советы</a></li>
+                        <li><a href="#contact"><i class="fas fa-question-circle"></i> Обратная связь</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero секция -->
+    <section class="hero">
+        <div class="container">
+            <h1>Первый ноутбук: выбираем вместе</h1>
+            <p>Не знаете, как выбрать первый ноутбук? Мы поможем! Узнайте всё о ключевых характеристиках, определите бюджет и получите персонализированные рекомендации.</p>
+            <a href="#criteria" class="cta-button">Начать выбор</a>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <div class="container">
+        <!-- Критерии выбора -->
+        <section id="criteria">
+            <h2 class="section-title">Ключевые критерии выбора</h2>
+            <div class="criteria-grid">
+                <div class="criteria-card">
+                    <div class="criteria-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="criteria-content">
+                        <h3>Процессор</h3>
+                        <p>Сердце ноутбука. Для офисных задач подойдут процессоры Intel Core i3 или AMD Ryzen 3. Для игр и сложных задач - Intel Core i5/i7 или AMD Ryzen 5/7.</p>
+                    </div>
+                </div>
+                <div class="criteria-card">
+                    <div class="criteria-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <div class="criteria-content">
+                        <h3>Оперативная память</h3>
+                        <p>8 ГБ - оптимальный минимум для большинства задач. 4 ГБ достаточно только для базовых офисных приложений. Для игр и профессиональных задач - 16 ГБ и более.</p>
+                    </div>
+                </div>
+                <div class="criteria-card">
+                    <div class="criteria-icon">
+                        <i class="fas fa-hdd"></i>
+                    </div>
+                    <div class="criteria-content">
+                        <h3>Накопитель</h3>
+                        <p>SSD (твердотельный накопитель) значительно быстрее HDD (жесткого диска). Минимум 256 ГБ SSD, лучше 512 ГБ. Для хранения больших объемов данных добавьте HDD.</p>
+                    </div>
+                </div>
+                <div class="criteria-card">
+                    <div class="criteria-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="criteria-content">
+                        <h3>Экран</h3>
+                        <p>Размер: 13-15 дюймов - баланс мобильности и комфорта. Разрешение: Full HD (1920x1080) - оптимально. Матовое покрытие уменьшает блики.</p>
+                    </div>
+                </div>
+                <div class="criteria-card">
+                    <div class="criteria-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <div class="criteria-content">
+                        <h3>Автономность</h3>
+                        <p>Для мобильной работы нужна батарея от 6-8 часов автономности. Обратите внимание на емкость батареи (Wh) и технологии энергосбережения.</p>
+                    </div>
+                </div>
+                <div class="criteria-card">
+                    <div class="criteria-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <div class="criteria-content">
+                        <h3>Вес и портативность</h3>
+                        <p>Для частых перемещений выбирайте ультрабуки весом 1.3-1.8 кг. Стационарные ноутбуки могут весить 2-3 кг, но предлагают лучшую производительность.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Калькулятор бюджета -->
+        <section id="calculator">
+            <h2 class="section-title">Определите ваш бюджет</h2>
+            <div class="calculator">
+                <h3>Калькулятор бюджета</h3>
+                <p>Используйте ползунок, чтобы установить ваш бюджет. Мы порекомендуем подходящие варианты.</p>
+                
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>Бюджет:</span>
+                        <span id="budgetAmount">45 000 ₽</span>
+                    </div>
+                    <input type="range" min="20000" max="150000" step="5000" value="45000" class="budget-slider" id="budgetSlider">
+                    <div class="budget-value" id="budgetValue">45 000 ₽</div>
+                </div>
+                
+                <div class="recommendation" id="recommendation">
+                    <h4>Наш совет для бюджета 45 000 ₽:</h4>
+                    <p>В этом ценовом диапазоне можно найти ноутбуки с процессорами Intel Core i3 или AMD Ryzen 3, 8 ГБ оперативной памяти, SSD на 256-512 ГБ и экраном Full HD. Подойдут для учебы, работы с документами и интернет-серфинга.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сравнение моделей -->
+        <section id="comparison">
+            <h2 class="section-title">Сравнение моделей</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Модель</th>
+                            <th>Процессор</th>
+                            <th>ОЗУ</th>
+                            <th>Накопитель</th>
+                            <th>Экран</th>
+                            <th>Цена</th>
+                            <th>Рейтинг</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lenovo IdeaPad 3</td>
+                            <td>AMD Ryzen 5 5500U</td>
+                            <td>8 ГБ</td>
+                            <td>512 ГБ SSD</td>
+                            <td>15.6" Full HD</td>
+                            <td>44 990 ₽</td>
+                            <td class="rating">★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <td>HP 255 G8</td>
+                            <td>AMD Ryzen 3 5300U</td>
+                            <td>8 ГБ</td>
+                            <td>256 ГБ SSD</td>
+                            <td>15.6" HD</td>
+                            <td>36 490 ₽</td>
+                            <td class="rating">★★★☆☆</td>
+                        </tr>
+                        <tr>
+                            <td>Acer Aspire 3</td>
+                            <td>Intel Core i3-1115G4</td>
+                            <td>8 ГБ</td>
+                            <td>256 ГБ SSD</td>
+                            <td>15.6" Full HD</td>
+                            <td>39 990 ₽</td>
+                            <td class="rating">★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <td>ASUS VivoBook 15</td>
+                            <td>Intel Core i5-1135G7</td>
+                            <td>8 ГБ</td>
+                            <td>512 ГБ SSD</td>
+                            <td>15.6" Full HD</td>
+                            <td>54 990 ₽</td>
+                            <td class="rating">★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>Xiaomi RedmiBook 15</td>
+                            <td>Intel Core i3-10110U</td>
+                            <td>8 ГБ</td>
+                            <td>256 ГБ SSD</td>
+                            <td>15.6" Full HD</td>
+                            <td>41 990 ₽</td>
+                            <td class="rating">★★★★☆</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Советы -->
+        <section id="tips">
+            <h2 class="section-title">Полезные советы</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Где покупать?</h3>
+                    <p>Проверяйте цены в нескольких магазинах. Часто выгоднее покупать онлайн. Обращайте внимание на акции и скидки.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Тестируйте перед покупкой</h3>
+                    <p>Если есть возможность, посетите магазин и проверьте: удобство клавиатуры, качество экрана, вес ноутбука.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Гарантия и сервис</h3>
+                    <p>Обращайте внимание на срок гарантии и наличие сервисных центров в вашем городе. Дополнительная гарантия часто окупается.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма вопросов -->
+        <section id="contact">
+            <h2 class="section-title">Остались вопросы?</h2>
+            <div class="contact-form">
+                <p>Заполните форму обратной связи, и мы поможем выбрать ноутбук для ваших задач.</p>
+                <form id="questionForm" 
+                    action="https://forms.yandex.ru/u/69b292f390fa7bde45176b5b"><button type="submit" class="cta-button">Перейти в опрос</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Первый ноутбук</h3>
+                    <p>Помогаем с выбором первого ноутбука с 2025 года. Простые объяснения, полезные советы и персонализированные рекомендации.</p>
+                    <div class="social-icons">
+                        <!-- <a href="#"><i class="fab fa-vk"></i></a> -->
+                        <!-- <a href="#"><i class="fab fa-telegram"></i></a> -->
+                        <!-- <a href="#"><i class="fas fa-envelope"></i></a> -->
+                        
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#criteria">Критерии выбора</a></li>
+                        <li><a href="#calculator">Калькулятор бюджета</a></li>
+                        <li><a href="#comparison">Сравнение моделей</a></li>
+                        <li><a href="#tips">Советы по выбору</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> gudaerovrinaz@ya.ru</li>
+                        <li><i class="fas fa-phone"></i> 8-917-867-40-28</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Альметьевск, ул. Мира 10</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 «Первый ноутбук: выбираем вместе». Все права защищены.</p>
+                <p>Информация предоставлена для ознакомления. Цены могут меняться.</p>
+                <p>ГАПОУ «Альметьевский политехнический техникум»</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Закрыть мобильное меню при клике на ссылку
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Калькулятор бюджета
+        const budgetSlider = document.getElementById('budgetSlider');
+        const budgetAmount = document.getElementById('budgetAmount');
+        const budgetValue = document.getElementById('budgetValue');
+        const recommendation = document.getElementById('recommendation');
+        
+        function formatBudget(value) {
+            return new Intl.NumberFormat('ru-RU').format(value) + ' ₽';
+        }
+        
+        function updateRecommendation(budget) {
+            let advice = '';
+            
+            if (budget < 35000) {
+                advice = '<h4>Наш совет для бюджета до 35 000 ₽:</h4><p>В этом ценовом диапазоне можно найти ноутбуки с процессорами Intel Celeron/Pentium или AMD Athlon, 4-8 ГБ оперативной памяти, SSD на 128-256 ГБ или HDD на 500 ГБ. Подойдут для базовых задач: интернет, работа с документами, просмотр видео.</p>';
+            } else if (budget >= 35000 && budget < 50000) {
+                advice = '<h4>Наш совет для бюджета 35 000 - 50 000 ₽:</h4><p>В этом ценовом диапазоне можно найти ноутбуки с процессорами Intel Core i3 или AMD Ryzen 3, 8 ГБ оперативной памяти, SSD на 256-512 ГБ и экраном Full HD. Подойдут для учебы, работы с документами и интернет-серфинга.</p>';
+            } else if (budget >= 50000 && budget < 80000) {
+                advice = '<h4>Наш совет для бюджета 50 000 - 80 000 ₽:</h4><p>В этом диапазоне доступны ноутбуки с процессорами Intel Core i5 или AMD Ryzen 5, 8-16 ГБ оперативной памяти, SSD на 512 ГБ-1 ТБ, качественным экраном Full HD. Подойдут для большинства задач, включая некоторые игры на средних настройках.</p>';
+            } else if (budget >= 80000 && budget < 120000) {
+                advice = '<h4>Наш совет для бюджета 80 000 - 120 000 ₽:</h4><p>В этом диапазоне можно выбрать мощные ноутбуки с процессорами Intel Core i7 или AMD Ryzen 7, 16 ГБ оперативной памяти, быстрыми SSD, дискретной видеокартой (NVIDIA GeForce GTX/RTX). Подойдут для игр, монтажа видео и работы с графикой.</p>';
+            } else {
+                advice = '<h4>Наш совет для бюджета от 120 000 ₽:</h4><p>Премиальные ноутбуки и игровые станции с топовыми процессорами Intel Core i9 или AMD Ryzen 9, 32 ГБ+ оперативной памяти, мощными видеокартами, SSD большого объема. Максимальная производительность для любых задач.</p>';
+            }
+            
+            recommendation.innerHTML = advice;
+        }
+        
+        budgetSlider.addEventListener('input', function() {
+            const value = parseInt(this.value);
+            budgetAmount.textContent = formatBudget(value);
+            budgetValue.textContent = formatBudget(value);
+            updateRecommendation(value);
+        });
+        
+        // Обработка формы
+        //const questionForm = document.getElementById('questionForm');
+        
+        //questionForm.addEventListener('submit', function(e) {
+            //e.preventDefault();
+            
+            //const name = document.getElementById('name').value;
+            //const email = document.getElementById('email').value;
+            //const budget = document.getElementById('budget').value;
+            //const purpose = document.getElementById('purpose').value;
+            //const question = document.getElementById('question').value;
+            
+            // В реальном приложении здесь был бы AJAX-запрос к серверу
+            //alert(`Спасибо, ${name}! Ваш вопрос отправлен. Мы ответим на ${email} в течение 24 часов.`);
+            
+            // Сброс формы
+            //questionForm.reset();
+        //});
+        
+        // Инициализация
+        updateRecommendation(parseInt(budgetSlider.value));
+    </script>
+</body>
+</html>
